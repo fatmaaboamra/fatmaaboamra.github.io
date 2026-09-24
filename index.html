@@ -1,0 +1,1107 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Fatma Mohamed Aboamra Mahmoud - Data Analyst & BI Specialist">
+    <title>Fatma Mohamed | Data Analyst Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;family=Manrope:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #f4f1ea;
+        --surface: #fffaf2;
+        --surface-2: #ece7dd;
+        --text: #22201d;
+        --muted: #555046;
+        --brand: #0f766e;
+        --brand-strong: #0a4f4a;
+        --accent: #d97706;
+        --border: #d4cec2;
+        --shadow: 0 18px 50px rgba(15, 118, 110, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Manrope", sans-serif;
+        color: var(--text);
+        background: radial-gradient(circle at 20% -10%, #fff4dc 0%, transparent 40%),
+          radial-gradient(circle at 90% 10%, #dcf0ec 0%, transparent 35%), var(--bg);
+        min-height: 100vh;
+        line-height: 1.6;
+      }
+
+      .chart-bg {
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        pointer-events: none;
+        display: flex;
+        align-items: flex-end;
+        gap: clamp(4px, 0.7vw, 10px);
+        padding: 0 clamp(10px, 2vw, 26px) 0;
+        overflow: hidden;
+        opacity: 0.6;
+      }
+
+      .chart-bg::before {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: min(38vh, 380px);
+        background: linear-gradient(to top, rgba(15, 118, 110, 0.09), rgba(15, 118, 110, 0));
+      }
+
+      .chart-bg::after {
+        content: "";
+        position: absolute;
+        inset: auto 0 0;
+        height: 1px;
+        background: rgba(10, 79, 74, 0.25);
+      }
+
+      .chart-bar {
+        width: var(--bar-width);
+        height: var(--bar-height);
+        border-radius: 10px 10px 0 0;
+        background: linear-gradient(
+          to top,
+          rgba(10, 79, 74, 0.58),
+          rgba(15, 118, 110, 0.35) 65%,
+          rgba(217, 119, 6, 0.2)
+        );
+        transform-origin: bottom center;
+        box-shadow: 0 -6px 18px rgba(15, 118, 110, 0.15);
+        animation: barFloat var(--bar-duration) ease-in-out var(--bar-delay) infinite alternate;
+        will-change: transform;
+      }
+
+      @keyframes barFloat {
+        0% {
+          transform: scaleY(0.82);
+          filter: saturate(0.9);
+        }
+        100% {
+          transform: scaleY(1.12);
+          filter: saturate(1.1);
+        }
+      }
+
+      .page-bg {
+        position: fixed;
+        inset: 0;
+        background-image: linear-gradient(transparent 97%, rgba(0, 0, 0, 0.035) 100%);
+        background-size: 100% 30px;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 4vw;
+        backdrop-filter: blur(8px);
+        background: rgba(244, 241, 234, 0.85);
+        border-bottom: 1px solid rgba(212, 206, 194, 0.7);
+      }
+
+      .brand {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--brand-strong);
+        letter-spacing: 0.03em;
+      }
+
+      .nav {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        text-decoration: none;
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .nav a:hover {
+        color: var(--brand);
+      }
+
+      main {
+        width: min(1140px, 92vw);
+        margin: 0 auto;
+        padding: 2rem 0 4rem;
+      }
+
+      section {
+        margin: 2rem 0;
+      }
+
+      .hero {
+        border: 1px solid var(--border);
+        background: linear-gradient(150deg, var(--surface) 0%, #f6f8f2 50%, #f5ece2 100%);
+        border-radius: 22px;
+        padding: clamp(1.4rem, 3.2vw, 3rem);
+        box-shadow: var(--shadow);
+      }
+
+      .hero-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.7fr) minmax(290px, 0.9fr);
+        gap: 1.5rem;
+        align-items: stretch;
+      }
+
+      .hero-main {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-panel {
+        display: grid;
+        gap: 0.9rem;
+      }
+
+      .panel-label {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-size: 0.72rem;
+        font-weight: 700;
+        color: var(--muted);
+      }
+
+      .hero-panel-card,
+      .hero-panel-list {
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid rgba(212, 206, 194, 0.95);
+        border-radius: 18px;
+        padding: 1.1rem;
+      }
+
+      .hero-panel-card h2 {
+        font-size: clamp(1.25rem, 2vw, 1.55rem);
+      }
+
+      .hero-panel-list {
+        display: grid;
+        gap: 0.85rem;
+      }
+
+      .hero-panel-list div {
+        display: grid;
+        gap: 0.18rem;
+      }
+
+      .hero-panel-list strong {
+        font-size: 0.88rem;
+        color: var(--brand-strong);
+      }
+
+      .hero-panel-list span {
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .hero-kicker {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        font-size: 0.78rem;
+        color: var(--brand);
+        font-weight: 700;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Space Grotesk", sans-serif;
+        line-height: 1.2;
+        margin: 0 0 0.6rem;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 4.2vw, 3.2rem);
+        margin-top: 0.5rem;
+      }
+
+      .name-row {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .name-row h1 {
+        margin: 0.5rem 0 0;
+      }
+
+      .name-avatar {
+        width: clamp(70px, 9vw, 96px);
+        height: clamp(70px, 9vw, 96px);
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        border: 3px solid rgba(255, 255, 255, 0.95);
+        box-shadow: 0 10px 26px rgba(15, 118, 110, 0.28);
+        flex-shrink: 0;
+      }
+
+      h2 {
+        font-size: clamp(1.5rem, 3vw, 2.2rem);
+      }
+
+      .hero-subtitle {
+        margin: 0.4rem 0 0.8rem;
+        font-size: 1.15rem;
+        color: var(--brand-strong);
+        font-weight: 700;
+      }
+
+      .hero-copy {
+        max-width: 720px;
+        color: #3b3731;
+      }
+
+      .hero-cta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-top: 1.2rem;
+      }
+
+      .btn {
+        text-decoration: none;
+        border-radius: 999px;
+        padding: 0.62rem 1.15rem;
+        font-weight: 700;
+        border: 1px solid transparent;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+      }
+
+      .btn-primary {
+        background: var(--brand);
+        color: #fff;
+        box-shadow: 0 8px 22px rgba(15, 118, 110, 0.25);
+      }
+
+      .btn-primary:hover {
+        background: var(--brand-strong);
+      }
+
+      .btn-outline {
+        border-color: var(--brand);
+        color: var(--brand-strong);
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+      .hero-metrics {
+        list-style: none;
+        margin: 1.4rem 0 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.7rem;
+      }
+
+      .hero-metrics li {
+        background: var(--surface-2);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 0.75rem;
+      }
+
+      .hero-metrics span {
+        display: block;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--brand-strong);
+      }
+
+      .hero-metrics small {
+        color: var(--muted);
+      }
+
+      .expertise-strip {
+        padding: 0.4rem 0;
+        background: transparent;
+        border: 0;
+      }
+
+      .expertise-strip div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+
+      .expertise-strip span {
+        padding: 0.55rem 0.95rem;
+        border-radius: 999px;
+        border: 1px solid rgba(10, 79, 74, 0.16);
+        background: rgba(255, 255, 255, 0.78);
+        color: var(--brand-strong);
+        font-weight: 700;
+        font-size: 0.92rem;
+      }
+
+      .about,
+      .skills,
+      .projects,
+      .experience,
+      .education-section,
+      .credentials,
+      .contact {
+        background: rgba(255, 250, 242, 0.85);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: clamp(1.2rem, 2.8vw, 2.2rem);
+      }
+
+      .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1rem;
+      }
+
+      .skill-grid article {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 1.1rem;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+      }
+
+      .skill-grid article small {
+        display: block;
+        margin-top: 0.6rem;
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .timeline {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .timeline-item {
+        display: grid;
+        grid-template-columns: 140px minmax(0, 1fr);
+        gap: 1.2rem;
+        align-items: start;
+        padding: 1.2rem;
+        border-radius: 16px;
+        background: #fff;
+        border: 1px solid var(--border);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+      }
+
+      .timeline-period {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 42px;
+        padding: 0.4rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(15, 118, 110, 0.1);
+        color: var(--brand-strong);
+        font-weight: 700;
+        font-size: 0.84rem;
+        text-align: center;
+      }
+
+      .timeline-org {
+        margin: 0 0 0.4rem;
+        color: var(--brand-strong);
+        font-weight: 700;
+      }
+
+      .timeline-item ul {
+        margin: 0.4rem 0 0;
+        padding-left: 1.2rem;
+        color: var(--muted);
+      }
+
+      .section-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.2rem;
+      }
+
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.1rem;
+      }
+
+      .project-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 28px rgba(0, 0, 0, 0.1);
+      }
+
+      .project-card img {
+        width: 100%;
+        height: 185px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .project-thumb-placeholder {
+        width: 100%;
+        height: 185px;
+        background: linear-gradient(135deg, #0f766e 0%, #0a4f4a 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 700;
+        font-size: 1.15rem;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      .project-content {
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .project-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.45rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .project-meta span {
+        background: rgba(15, 118, 110, 0.08);
+        color: var(--brand-strong);
+        border: 1px solid rgba(15, 118, 110, 0.16);
+        border-radius: 999px;
+        padding: 0.24rem 0.55rem;
+        font-size: 0.76rem;
+        font-weight: 700;
+      }
+
+      .project-content h3 {
+        font-size: 1.15rem;
+      }
+
+      .project-content p {
+        color: var(--muted);
+        font-size: 0.92rem;
+        margin-bottom: 0.6rem;
+      }
+
+      .project-content ul {
+        margin: 0;
+        padding-left: 1.2rem;
+        font-size: 0.88rem;
+        color: var(--muted);
+      }
+
+      .badge-wrap {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.85rem;
+      }
+
+      .badge-wrap span {
+        display: flex;
+        align-items: center;
+        min-height: 64px;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--accent);
+        border-radius: 14px;
+        padding: 0.75rem 0.95rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+      }
+
+      .floating-buttons {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.9rem;
+      }
+
+      .fab {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.74rem 1.15rem;
+        border-radius: 999px;
+        text-decoration: none;
+        color: var(--brand-strong);
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px solid rgba(10, 79, 74, 0.2);
+        box-shadow: 0 10px 20px rgba(10, 79, 74, 0.1);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      }
+
+      .fab:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 26px rgba(10, 79, 74, 0.18);
+        background: #ffffff;
+      }
+
+      .fab-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(15, 118, 110, 0.12);
+        border: 1px solid rgba(15, 118, 110, 0.2);
+        font-weight: 700;
+        font-size: 0.9rem;
+        font-family: "Space Grotesk", sans-serif;
+      }
+
+      .fab-label {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      footer {
+        width: min(1140px, 92vw);
+        margin: 0 auto 1.5rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.7s ease, transform 0.7s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      @media (max-width: 980px) {
+        .hero-layout,
+        .badge-wrap,
+        .skill-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .project-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .hero-metrics {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .timeline-item {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .site-header {
+          padding: 0.8rem 4vw;
+          gap: 0.7rem;
+        }
+
+        .nav {
+          order: 3;
+          width: 100%;
+          justify-content: center;
+        }
+
+        .project-grid,
+        .hero-metrics {
+          grid-template-columns: 1fr;
+        }
+
+        .name-row {
+          align-items: flex-start;
+        }
+
+        .name-avatar {
+          width: 62px;
+          height: 62px;
+        }
+
+        .chart-bg {
+          opacity: 0.38;
+          gap: 4px;
+        }
+
+        .floating-buttons {
+          flex-direction: column;
+          align-items: stretch;
+        }
+
+        .fab {
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chart-bg" aria-hidden="true"></div>
+    <div class="page-bg"></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home">Fatma Mohamed</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="btn btn-outline" href="https://drive.google.com/drive/folders/1kCsaZsFkycYHieaaOoexv7SABwInuCHU" target="_blank" rel="noreferrer">
+        View CV
+      </a>
+    </header>
+
+    <main id="home">
+      <!-- HERO -->
+      <section class="hero reveal visible">
+        <div class="hero-layout">
+          <div class="hero-main">
+            <p class="hero-kicker">Data &amp; AI Analytics Portfolio</p>
+            <div class="name-row">
+              <img class="name-avatar" src="images/p_3769hf2zz5.jpeg" alt="Fatma Mohamed AboAmra" loading="eager">
+              <h1>Fatma Mohamed AboAmra</h1>
+            </div>
+            <p class="hero-subtitle">Data Analyst | BI &amp; Analytics Specialist | AI Data Analyst</p>
+            <p class="hero-copy">
+              Computer Science graduate (Honours: 2:1) transforming complex raw datasets into actionable insights, automated ETL pipelines, and executive reporting solutions with Power BI, SQL, Python, and AWS[cite: 1].
+            </p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#projects">Explore Featured Projects</a>
+              <a class="btn btn-outline" href="mailto:fmohamedaboamra@gmail.com">Email Me</a>
+            </div>
+            <ul class="hero-metrics">
+              <li>
+                <span>$1.57M</span>
+                <small>Sales Volume Modeled</small>
+              </li>
+              <li>
+                <span>98/100</span>
+                <small>Cambridge ESG Score</small>
+              </li>
+              <li>
+                <span>Top 5K</span>
+                <small>Google Build with AI</small>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="hero-panel">
+            <p class="panel-label">Professional Snapshot</p>
+            <div class="hero-panel-card">
+              <h2>Data-Driven Decision Making</h2>
+              <p>
+                Technical Instructor &amp; Analytics Specialist bridging business logic, cloud ETL pipelines, and KPI visual storytelling.
+              </p>
+            </div>
+            <div class="hero-panel-list">
+              <div>
+                <strong>Location</strong>
+                <span>Cairo, Egypt</span>
+              </div>
+              <div>
+                <strong>Degree</strong>
+                <span>B.Sc. (Hons) in Computer Science (Dual: AOU &amp; OU-UK)</span>
+              </div>
+              <div>
+                <strong>Key Focus</strong>
+                <span>Power BI, Dimensional Modeling, Machine Learning, AWS</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- EXPERTISE PILLS -->
+      <section class="expertise-strip reveal visible">
+        <div>
+          <span>Power BI &amp; Advanced DAX</span>
+          <span>Dimensional Modeling (Star Schema)</span>
+          <span>SQL &amp; PostgreSQL</span>
+          <span>Python (Pandas &amp; Scikit-learn)</span>
+          <span>AWS Serverless ETL</span>
+          <span>Databricks &amp; PySpark</span>
+          <span>Supply Chain &amp; ESG Analytics</span>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="about reveal visible">
+        <h2>About Me</h2>
+        <p>
+          Results-driven Data Analyst, Technical Instructor, and Computer Science graduate with comprehensive experience across the entire data lifecycle: automated ETL pipelines, relational and dimensional modeling, predictive analytics, and executive reporting. Selected among the top 5,000 developers across Egypt in Google’s Build with AI program and McKinsey Forward alumna. Experienced technical mentor who bridges business operational goals with data engineering precision.
+        </p>
+      </section>
+
+      <!-- EDUCATION -->
+      <section id="education" class="education-section reveal">
+        <div class="section-head">
+          <h2>Education &amp; Dual Accreditation</h2>
+          <p>UK Honours Degree System &amp; National Accreditation</p>
+        </div>
+        <div class="timeline-item">
+          <span class="timeline-period">08/2026</span>
+          <div>
+            <h3>Bachelor of Science (Honours) in Computer Science</h3>
+            <p class="timeline-org">Arab Open University (In Academic Partnership with The Open University, UK)</p>
+            <ul>
+              <li><strong>UK Honours Classification:</strong> Upper Second-Class Honours (2:1)</li>
+              <li><strong>Cumulative GPA:</strong> 3.07 / 4.00 (Very Good)[cite: 1]</li>
+              <li><strong>Graduation Project Grade:</strong> B+ (Very Good / Merit)[cite: 1]</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section id="skills" class="skills reveal">
+        <h2>Technical Core Competencies</h2>
+        <div class="skill-grid">
+          <article>
+            <h3>Data Analysis &amp; BI</h3>
+            <p>Power BI (Advanced DAX, Power Query, Data Modeling, Star Schema), Tableau, Microsoft Excel (Power Pivot, What-If Analysis).</p>
+            <small>Executive visual analytics, KPI cards, and dashboard storytelling</small>
+          </article>
+          <article>
+            <h3>Programming &amp; Databases</h3>
+            <p>Python (Pandas, NumPy, Scikit-learn, Seaborn), SQL (PostgreSQL, MySQL, Complex Queries, CTEs, Window Functions).</p>
+            <small>Database normalization, advanced querying, and statistical modeling</small>
+          </article>
+          <article>
+            <h3>Cloud &amp; Big Data</h3>
+            <p>AWS (S3, Lambda, EC2, ALB, ASG, VPC, Cognito), Databricks, PySpark (DataFrames, Spark SQL), Delta Lake.</p>
+            <small>Serverless automated ETL workflows and scalable cloud architecture</small>
+          </article>
+          <article>
+            <h3>Data Management</h3>
+            <p>ETL Pipeline Engineering, Relational Modeling, Exploratory Data Analysis (EDA), Predictive Machine Learning, Git/GitHub.</p>
+            <small>Data cleansing, ingestion pipelines, and version control</small>
+          </article>
+          <article>
+            <h3>Business Domains</h3>
+            <p>Supply Chain Optimization, Carbon Accounting &amp; ESG Metrics, Retail Commercial Analytics, Customer Behavior Analysis.</p>
+            <small>Translating business questions into analytical drivers and margins</small>
+          </article>
+          <article>
+            <h3>Instruction &amp; Leadership</h3>
+            <p>Technical Mentorship, Curriculum Delivery, Business Problem Solving, Analytical Thinking, Cross-functional Collaboration.</p>
+            <small>Mentored 100+ learners across national and regional tech programs</small>
+          </article>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section id="experience" class="experience reveal">
+        <div class="section-head">
+          <h2>Professional Experience &amp; Leadership</h2>
+          <p>Instruction, mentorship, and intensive scholarship achievements.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-period">07/2026 – Present</span>
+            <div>
+              <h3>Data Analysis Instructor (Part-time)</h3>
+              <p class="timeline-org">EYouth (DECI Initiative)</p>
+              <ul>
+                <li>Deliver technical lectures and practical workshops covering data analytics workflows, SQL querying, and Power BI BI modeling.</li>
+                <li>Evaluate student projects, design practical assessments, and guide learners through data preparation and business storytelling.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-period">01/2026 – Present</span>
+            <div>
+              <h3>Data Analysis Mentor</h3>
+              <p class="timeline-org">Egypt Data Builders</p>
+              <ul>
+                <li>Mentored participants in SQL optimization, relational database normalization, and Power BI dashboard development.</li>
+                <li>Supported learners in core analytics concepts and business reporting techniques.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <span class="timeline-period">03/2025 – 09/2025</span>
+            <div>
+              <h3>DEPI Scholar (Data Science &amp; Analytics)</h3>
+              <p class="timeline-org">Digital Egypt Pioneers Initiative (DEPI) – MCIT</p>
+              <ul>
+                <li>Completed an intensive 6-month scholarship delivered by the Ministry of Communications and Information Technology.</li>
+                <li>Analyzed multidimensional datasets using Python and SQL, building relational data models and KPI reports in Power BI.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- FEATURED PROJECTS -->
+      <section id="projects" class="projects reveal">
+        <div class="section-head">
+          <h2>Featured Analytics &amp; Cloud Projects</h2>
+          <p>Production dashboards, cloud architectures, and machine learning models.</p>
+        </div>
+
+        <div class="project-grid">
+          <!-- 1. Patagonia ESG -->
+          <article class="project-card">
+            <div class="project-thumb-placeholder" style="background: linear-gradient(135deg, #1e3a8a, #0f766e);">
+              Patagonia ESG &amp; Supply Chain Resilience
+            </div>
+            <div class="project-content">
+              <div class="project-meta">
+                <span>Cambridge &amp; Localized</span>
+                <span>ESG Analytics</span>
+                <span>Supply Chain</span>
+              </div>
+              <h3>Patagonia Supply Chain &amp; ESG Analysis</h3>
+              <p>Evaluated Patagonia’s global supply chain sustainability metrics and carbon accounting frameworks, earning a <strong>98/100</strong> evaluation score.</p>
+              <ul>
+                <li>Formulated data-backed operational action plans for environmental compliance.</li>
+                <li>Balanced carbon reduction mechanisms with logistical efficiency.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 2. CloudCart AWS ETL -->
+          <article class="project-card">
+            <img src="images/Screenshot 2026-09-24 190048.jpg" alt="CloudCart AWS e-commerce platform interface" loading="lazy">
+            <div class="project-content">
+              <div class="project-meta">
+                <span>AWS Architecture</span>
+                <span>Python Lambda</span>
+                <span>PostgreSQL</span>
+              </div>
+              <h3>CloudCart – Scalable Cloud Infrastructure &amp; ETL</h3>
+              <p>Built an automated serverless data processing workflow using AWS S3 event triggers and Python Lambda functions to ingest and load clean records into PostgreSQL.</p>
+              <ul>
+                <li>Configured multi-AZ VPC, Application Load Balancers (ALB), and Auto Scaling Groups (ASG).</li>
+                <li>Implemented Amazon Cognito authentication and CloudWatch monitoring.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 3. Car Price ML Prediction -->
+          <article class="project-card">
+            <img src="images/__results___75_1.png" alt="Used car market price prediction correlation heatmap" loading="lazy">
+            <div class="project-content">
+              <div class="project-meta">
+                <span>Python</span>
+                <span>Scikit-learn</span>
+                <span>Regression ML</span>
+              </div>
+              <h3>Used Car Market Price Prediction</h3>
+              <p>Conducted exploratory data analysis and feature engineering on multidimensional automotive datasets to isolate key pricing variables and build ML regression models.</p>
+              <ul>
+                <li>Analyzed feature correlations across vehicle age, mileage, and engine size.</li>
+                <li>Trained regression models achieving high explanatory variance (R²).</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 4. Adidas -->
+          <article class="project-card">
+            <img src="images/p_37691759h3.jpeg" alt="Adidas sales analytics dashboard" loading="lazy">
+            <div class="project-content">
+              <div class="project-meta">
+                <span>Power BI</span>
+                <span>Star Schema</span>
+                <span>Advanced DAX</span>
+              </div>
+              <h3>Adidas Sales Performance Dashboard</h3>
+              <p>Transformed an unnormalized transactional dataset into an optimized Star Schema dimensional model to track revenue and regional growth.</p>
+              <ul>
+                <li>Authored custom DAX (Total Sales, Total Profit, Profit Margin %, Unit Velocity).</li>
+                <li>Analyzed performance discrepancies across distribution partners.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 5. Executive 360 -->
+          <article class="project-card">
+            <img src="images/p_37691b55y2.jpeg" alt="Executive sales dashboard" loading="lazy">
+            <div class="project-content">
+              <div class="project-meta">
+                <span>Power BI</span>
+                <span>Relational Modeling</span>
+                <span>DAX</span>
+              </div>
+              <h3>Executive 360° Commercial Sales</h3>
+              <p>Modeled enterprise retail data to deliver an Executive 360° View tracking $1.57M in revenue, $175K in profit, and regional margin trends.</p>
+              <ul>
+                <li>Isolated $91K in negative profits across underperforming categories.</li>
+                <li>Analyzed customer retention and order payment behaviors.</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 6. Coffee Shop -->
+          <article class="project-card">
+            <img src="images/p_3769qfad11.jpeg" alt="Coffee shop analytics dashboard" loading="lazy">
+            <div class="project-content">
+              <div class="project-meta">
+                <span>Power BI</span>
+                <span>Power Query</span>
+                <span>Retail BI</span>
+              </div>
+              <h3>Coffee Shop Sales Analytics</h3>
+              <p>Processed and transformed 5 operational tables using Power Query to analyze sales performance across product lines and store branches.</p>
+              <ul>
+                <li>Identified customer purchasing trends and demographic margins.</li>
+                <li>Tracked month-over-month profit growth for inventory planning.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CREDENTIALS & SCHOLARSHIPS -->
+      <section id="credentials" class="credentials reveal">
+        <div class="section-head">
+          <h2>Fellowships &amp; Professional Certifications</h2>
+          <p>Rigorous certifications, competitive fellowships, and honors.</p>
+        </div>
+        <div class="badge-wrap">
+          <span>NTI HireReady Scholarship (AI in Data Analysis)</span>
+          <span>University of Cambridge &amp; Localized ESG Programme</span>
+          <span>Google Data Analytics Professional Certificate</span>
+          <span>IBM SkillsBuild Data Analytics Professional (6 Badges)</span>
+          <span>DEPI Microsoft Power BI Engineer (MCIT)</span>
+          <span>Build with AI: Masr Edition (Top 5,000 Developers)</span>
+          <span>McKinsey Forward Program Alumna</span>
+          <span>Oracle Cloud Infrastructure Foundations</span>
+          <span>Huawei ICT Academy &amp; ITI (HCCDA - Tech Essentials)</span>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="contact reveal">
+        <h2>Let's Work Together</h2>
+        <p>Open to Data Analyst, BI Specialist, and Analytics Engineering roles. Based in Cairo, Egypt.</p>
+        <div class="floating-buttons">
+          <a class="fab" href="mailto:fmohamedaboamra@gmail.com" aria-label="Send Email">
+            <span class="fab-icon">@</span>
+            <span class="fab-label">fmohamedaboamra@gmail.com</span>
+          </a>
+          <a class="fab" href="https://linkedin.com/in/fatma-mohamed-aboamra-48a441224/" target="_blank" rel="noreferrer" aria-label="Open LinkedIn">
+            <span class="fab-icon">in</span>
+            <span class="fab-label">LinkedIn</span>
+          </a>
+          <a class="fab" href="https://github.com/fatmaaboamra" target="_blank" rel="noreferrer" aria-label="Open GitHub">
+            <span class="fab-icon">&lt;&gt;</span>
+            <span class="fab-label">GitHub</span>
+          </a>
+          <a class="fab" href="tel:+201030499512" aria-label="Call Phone">
+            <span class="fab-icon">+</span>
+            <span class="fab-label">+20 1030499512</span>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        © 2026 Fatma Mohamed AboAmra Mahmoud. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      const revealItems = document.querySelectorAll('.reveal');
+      const chartBackground = document.querySelector('.chart-bg');
+
+      if (chartBackground) {
+        const barsCount = window.innerWidth < 700 ? 24 : 40;
+
+        for (let index = 0; index < barsCount; index += 1) {
+          const bar = document.createElement('span');
+          bar.className = 'chart-bar';
+
+          const minHeight = 70;
+          const maxHeight = window.innerWidth < 700 ? 220 : 320;
+          const height = Math.floor(Math.random() * (maxHeight - minHeight + 1)) + minHeight;
+          const width = window.innerWidth < 700 ? 9 : 14;
+          const duration = (Math.random() * 2.8 + 2.2).toFixed(2);
+          const delay = (Math.random() * 1.6).toFixed(2);
+
+          bar.style.setProperty('--bar-height', `${height}px`);
+          bar.style.setProperty('--bar-width', `${width}px`);
+          bar.style.setProperty('--bar-duration', `${duration}s`);
+          bar.style.setProperty('--bar-delay', `${delay}s`);
+
+          chartBackground.appendChild(bar);
+        }
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: '0px 0px -30px 0px'
+        }
+      );
+
+      revealItems.forEach((item, index) => {
+        item.style.transitionDelay = `${Math.min(index * 80, 320)}ms`;
+        observer.observe(item);
+      });
+    </script>
+  </body></html>
