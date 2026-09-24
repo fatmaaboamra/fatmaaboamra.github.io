@@ -46,6 +46,7 @@
       pointer-events: none;
     }
 
+    /* Header */
     .site-header {
       position: sticky;
       top: 0;
@@ -111,23 +112,24 @@
     }
     .hero-avatar-wrap {
       position: relative;
-      width: clamp(140px, 15vw, 190px);
-      height: clamp(140px, 15vw, 190px);
+      width: clamp(140px, 16vw, 180px);
+      aspect-ratio: 1 / 1;
       flex-shrink: 0;
     }
     .hero-avatar {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
+      border-radius: 24px;
       object-fit: cover;
-      object-position: center;
+      object-position: center 20%;
       border: 3px solid var(--gold);
-      box-shadow: 0 0 30px rgba(226, 177, 112, 0.22);
+      box-shadow: 0 10px 30px rgba(226, 177, 112, 0.22);
+      display: block;
     }
     .status-badge {
       position: absolute;
-      bottom: 6px;
-      right: 6px;
+      bottom: -8px;
+      right: -6px;
       background: var(--surface-card);
       border: 1px solid var(--border);
       color: var(--gold-soft);
@@ -138,6 +140,7 @@
       display: flex;
       align-items: center;
       gap: 0.35rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
     .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); }
 
@@ -420,7 +423,7 @@
     <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-avatar-wrap">
-        <img class="hero-avatar" src="p_3769qfad11.jpeg" alt="Fatma Mohamed AboAmra">
+        <img class="hero-avatar" src="images/p_3769qfad11.jpeg" alt="Fatma Mohamed AboAmra">
         <div class="status-badge"><span class="status-dot"></span> Available</div>
       </div>
       <div class="hero-content">
@@ -469,7 +472,7 @@
       <div class="project-grid">
         <!-- 1. Patagonia ESG (Cambridge) -->
         <article class="project-card" data-category="cloud">
-          <img class="project-thumb" src="Screenshot%202026-09-24%20193558.png" alt="Patagonia ESG Cambridge Certificate" loading="lazy">
+          <img class="project-thumb" src="images/Screenshot%202026-09-24%20193558.png" alt="Patagonia ESG Cambridge Certificate" loading="lazy">
           <div class="project-body">
             <div class="tag-strip">
               <span class="tag">Cambridge &amp; Localized</span>
@@ -483,7 +486,7 @@
 
         <!-- 2. CloudCart (AWS Pipeline) -->
         <article class="project-card" data-category="cloud">
-          <img class="project-thumb" src="Screenshot%202026-09-24%20190048.png" alt="CloudCart AWS Architecture" loading="lazy">
+          <img class="project-thumb" src="images/Screenshot%202026-09-24%20190048.png" alt="CloudCart AWS Architecture" loading="lazy">
           <div class="project-body">
             <div class="tag-strip">
               <span class="tag">AWS S3 &amp; Lambda</span>
@@ -497,7 +500,7 @@
 
         <!-- 3. ML Car Prediction (Python) -->
         <article class="project-card" data-category="ml">
-          <img class="project-thumb" src="__results___75_1.png" alt="Used Car Correlation Heatmap" loading="lazy">
+          <img class="project-thumb" src="images/__results___75_1.png" alt="Used Car Correlation Heatmap" loading="lazy">
           <div class="project-body">
             <div class="tag-strip">
               <span class="tag">Python</span>
@@ -511,7 +514,7 @@
 
         <!-- 4. Adidas (Power BI) -->
         <article class="project-card" data-category="bi">
-          <img class="project-thumb" src="p_37691759h3.jpeg" alt="Adidas Sales Dashboard" loading="lazy">
+          <img class="project-thumb" src="images/p_37691759h3.jpeg" alt="Adidas Sales Dashboard" loading="lazy">
           <div class="project-body">
             <div class="tag-strip">
               <span class="tag">Power BI</span>
@@ -525,7 +528,7 @@
 
         <!-- 5. Executive 360 (Power BI) -->
         <article class="project-card" data-category="bi">
-          <img class="project-thumb" src="p_37691b55y2.jpeg" alt="Executive 360 Dashboard" loading="lazy">
+          <img class="project-thumb" src="images/p_37691b55y2.jpeg" alt="Executive 360 Dashboard" loading="lazy">
           <div class="project-body">
             <div class="tag-strip">
               <span class="tag">Power BI</span>
@@ -539,7 +542,7 @@
 
         <!-- 6. Coffee Shop (Power BI) -->
         <article class="project-card" data-category="bi">
-          <img class="project-thumb" src="1744385373625.jpg" alt="Coffee Shop Analytics" loading="lazy">
+          <img class="project-thumb" src="images/1744385373625.jpg" alt="Coffee Shop Analytics" loading="lazy">
           <div class="project-body">
             <div class="tag-strip">
               <span class="tag">Power Query</span>
