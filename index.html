@@ -1,352 +1,354 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Fatma Mohamed - Data Analyst & BI Specialist">
-    <title>Fatma Mohamed | Data Analyst Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&amp;family=Manrope:wght@400;600;700&amp;display=swap" rel="stylesheet">
-    <style>
-      :root {
-        --bg: #f7f5f0;
-        --surface: #ffffff;
-        --text: #1f2937;
-        --muted: #6b7280;
-        --brand: #0f766e;
-        --brand-dark: #0a4f4a;
-        --accent: #d97706;
-        --border: #e5e0d8;
-        --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      }
-      * { box-sizing: border-box; margin: 0; padding: 0; }
-      body {
-        font-family: "Manrope", sans-serif;
-        color: var(--text);
-        background: var(--bg);
-        line-height: 1.5;
-      }
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 1rem 5vw;
-        background: rgba(247, 245, 240, 0.9);
-        backdrop-filter: blur(8px);
-        border-bottom: 1px solid var(--border);
-      }
-      .brand {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: 1.3rem;
-        font-weight: 700;
-        text-decoration: none;
-        color: var(--brand-dark);
-      }
-      .nav { display: flex; gap: 1.5rem; align-items: center; }
-      .nav a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.95rem; }
-      .nav a:hover { color: var(--brand); }
-      .btn {
-        text-decoration: none;
-        border-radius: 999px;
-        padding: 0.55rem 1.2rem;
-        font-weight: 700;
-        font-size: 0.9rem;
-        transition: all 0.2s ease;
-      }
-      .btn-primary { background: var(--brand); color: #fff; }
-      .btn-primary:hover { background: var(--brand-dark); }
-      .btn-outline { border: 1px solid var(--brand); color: var(--brand); }
-      
-      main { width: min(1140px, 92vw); margin: 0 auto; padding: 2.5rem 0 4rem; }
-      
-      /* Hero */
-      .hero {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 20px;
-        padding: 2.5rem;
-        display: flex;
-        gap: 2.5rem;
-        align-items: center;
-        box-shadow: var(--shadow);
-        margin-bottom: 2.5rem;
-      }
-      .hero-avatar {
-        width: 130px;
-        height: 130px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #fff;
-        box-shadow: 0 8px 20px rgba(15, 118, 110, 0.2);
-        flex-shrink: 0;
-      }
-      .hero-content h1 {
-        font-family: "Space Grotesk", sans-serif;
-        font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-        color: var(--brand-dark);
-        margin-bottom: 0.3rem;
-      }
-      .hero-title {
-        color: var(--accent);
-        font-weight: 700;
-        font-size: 1.1rem;
-        margin-bottom: 0.6rem;
-      }
-      .hero-desc { color: var(--muted); font-size: 0.98rem; max-width: 650px; margin-bottom: 1.2rem; }
-      .metrics-strip {
-        display: flex;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-      }
-      .metric-box {
-        background: var(--bg);
-        padding: 0.6rem 1rem;
-        border-radius: 12px;
-        border: 1px solid var(--border);
-      }
-      .metric-box strong { display: block; font-family: "Space Grotesk"; font-size: 1.2rem; color: var(--brand-dark); }
-      .metric-box span { font-size: 0.78rem; color: var(--muted); }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Fatma Mohamed - Data Analyst & BI Specialist">
+  <title>Fatma Mohamed | Data Analyst Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f4f1ea;
+      --surface: #fffaf2;
+      --surface-2: #ece7dd;
+      --text: #22201d;
+      --muted: #555046;
+      --brand: #0f766e;
+      --brand-strong: #0a4f4a;
+      --accent: #d97706;
+      --border: #d4cec2;
+      --shadow: 0 14px 40px rgba(15, 118, 110, 0.10);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Manrope", sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 20% -10%, #fff4dc 0%, transparent 40%),
+                  radial-gradient(circle at 90% 10%, #dcf0ec 0%, transparent 35%), var(--bg);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 5vw;
+      backdrop-filter: blur(10px);
+      background: rgba(244, 241, 234, 0.90);
+      border-bottom: 1px solid rgba(212, 206, 194, 0.7);
+    }
+    .brand {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--brand-strong);
+    }
+    .nav { display: flex; gap: 1.4rem; align-items: center; }
+    .nav a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.95rem; }
+    .nav a:hover { color: var(--brand); }
+    .btn {
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 0.55rem 1.25rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    .btn-primary { background: var(--brand); color: #fff; box-shadow: 0 6px 18px rgba(15, 118, 110, 0.25); }
+    .btn-primary:hover { background: var(--brand-strong); transform: translateY(-2px); }
+    .btn-outline { border: 1px solid var(--brand); color: var(--brand-strong); background: rgba(255,255,255,0.7); }
+    .btn-outline:hover { background: #fff; transform: translateY(-2px); }
 
-      /* Section Heads */
-      .section-head { margin-bottom: 1.5rem; }
-      .section-head h2 { font-family: "Space Grotesk"; font-size: 1.8rem; color: var(--brand-dark); }
-      .section-head p { color: var(--muted); font-size: 0.95rem; }
+    main { width: min(1140px, 92vw); margin: 0 auto; padding: 2rem 0 4rem; }
 
-      /* Projects Grid */
-      .projects-section { margin-bottom: 3rem; }
-      .project-grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.5rem;
-      }
-      .project-card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.2s ease;
-      }
-      .project-card:hover { transform: translateY(-4px); }
-      .project-card img {
-        width: 100%;
-        height: 190px;
-        object-fit: cover;
-        background: #eee;
-        border-bottom: 1px solid var(--border);
-      }
-      .project-card-body {
-        padding: 1.2rem;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
-      .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
-      .tag {
-        background: rgba(15, 118, 110, 0.08);
-        color: var(--brand);
-        font-size: 0.75rem;
-        font-weight: 700;
-        padding: 0.2rem 0.55rem;
-        border-radius: 999px;
-      }
-      .project-card-body h3 { font-family: "Space Grotesk"; font-size: 1.15rem; margin-bottom: 0.4rem; }
-      .project-card-body p { font-size: 0.88rem; color: var(--muted); flex-grow: 1; }
+    /* Hero */
+    .hero {
+      background: linear-gradient(150deg, var(--surface) 0%, #f6f8f2 50%, #f5ece2 100%);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: clamp(1.5rem, 3vw, 2.8rem);
+      box-shadow: var(--shadow);
+      display: flex;
+      gap: 2.2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .hero-avatar {
+      width: clamp(100px, 12vw, 135px);
+      height: clamp(100px, 12vw, 135px);
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 4px solid #fff;
+      box-shadow: 0 10px 24px rgba(15, 118, 110, 0.22);
+      flex-shrink: 0;
+    }
+    .hero-content h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.8rem, 3.4vw, 2.5rem);
+      color: var(--brand-strong);
+      margin-bottom: 0.3rem;
+    }
+    .hero-title {
+      color: var(--brand);
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.6rem;
+    }
+    .hero-desc { color: var(--muted); font-size: 0.98rem; max-width: 680px; margin-bottom: 1.2rem; }
+    .metrics-strip { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .metric-box {
+      background: var(--surface-2);
+      padding: 0.6rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+    .metric-box strong { display: block; font-family: "Space Grotesk"; font-size: 1.2rem; color: var(--brand-strong); }
+    .metric-box span { font-size: 0.78rem; color: var(--muted); }
 
-      /* Highlights Row */
-      .highlights-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        margin-bottom: 3rem;
-      }
-      .card-box {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: 1.5rem;
-        box-shadow: var(--shadow);
-      }
-      .card-box h3 { font-family: "Space Grotesk"; color: var(--brand-dark); margin-bottom: 1rem; }
-      .list-simple { list-style: none; display: grid; gap: 0.8rem; }
-      .list-simple li { display: flex; justify-content: space-between; font-size: 0.92rem; border-bottom: 1px dashed var(--border); padding-bottom: 0.4rem; }
-      .list-simple li span { color: var(--muted); }
-      .list-simple li strong { color: var(--brand); }
+    /* Projects Grid */
+    .section-head { margin: 2rem 0 1.2rem; }
+    .section-head h2 { font-family: "Space Grotesk"; font-size: 1.8rem; color: var(--brand-strong); }
+    .section-head p { color: var(--muted); font-size: 0.95rem; }
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.3rem;
+      margin-bottom: 2.5rem;
+    }
+    .project-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(0,0,0,0.08); }
+    .project-card img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid var(--border);
+      background: #f0ece3;
+    }
+    .project-card-body {
+      padding: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.6rem; }
+    .tag {
+      background: rgba(15, 118, 110, 0.08);
+      color: var(--brand-strong);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+    }
+    .project-card-body h3 { font-family: "Space Grotesk"; font-size: 1.15rem; margin-bottom: 0.4rem; }
+    .project-card-body p { font-size: 0.88rem; color: var(--muted); line-height: 1.5; }
 
-      /* Footer */
-      footer { text-align: center; color: var(--muted); font-size: 0.88rem; padding: 2rem 0; border-top: 1px solid var(--border); }
+    /* Summary Snapshot */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    .card-box {
+      background: rgba(255, 250, 242, 0.85);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.4rem;
+      box-shadow: var(--shadow);
+    }
+    .card-box h3 { font-family: "Space Grotesk"; color: var(--brand-strong); margin-bottom: 1rem; }
+    .list-simple { list-style: none; display: grid; gap: 0.8rem; }
+    .list-simple li { display: flex; justify-content: space-between; font-size: 0.92rem; border-bottom: 1px dashed var(--border); padding-bottom: 0.45rem; }
+    .list-simple li span { color: var(--muted); }
+    .list-simple li strong { color: var(--brand-strong); }
 
-      @media (max-width: 900px) {
-        .project-grid { grid-template-columns: repeat(2, 1fr); }
-        .hero { flex-direction: column; text-align: center; align-items: center; }
-        .metrics-strip { justify-content: center; }
-        .highlights-grid { grid-template-columns: 1fr; }
-      }
-      @media (max-width: 600px) {
-        .project-grid { grid-template-columns: 1fr; }
-      }
-    </style>
-  </head>
-  <body>
+    footer { text-align: center; color: var(--muted); font-size: 0.88rem; padding: 2rem 0; border-top: 1px solid var(--border); }
 
-    <header class="site-header">
-      <a class="brand" href="#">Fatma Mohamed</a>
-      <nav class="nav">
-        <a href="#projects">Dashboards &amp; Work</a>
-        <a href="#about">Experience</a>
-        <a class="btn btn-outline" href="https://drive.google.com/drive/folders/1kCsaZsFkycYHieaaOoexv7SABwInuCHU" target="_blank" rel="noreferrer">
-          Full Resume (PDF)
-        </a>
-      </nav>
-    </header>
+    @media (max-width: 900px) {
+      .project-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero { flex-direction: column; text-align: center; align-items: center; }
+      .metrics-strip { justify-content: center; }
+      .highlights-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 620px) {
+      .project-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
 
-    <main>
-      <!-- HERO (Focused on Visual Clarity) -->
-      <section class="hero">
-        <img class="hero-avatar" src="images/profile.jpg" alt="Fatma Mohamed">
-        <div class="hero-content">
-          <h1>Fatma Mohamed AboAmra</h1>
-          <div class="hero-title">Data Analyst | Power BI &amp; Analytics Specialist</div>
-          <p class="hero-desc">
-            Computer Science graduate (Honours: 2:1) specialized in turning messy operational data into executive dashboards, dimensional data models, and automated ETL pipelines[cite: 1].
-          </p>
-          <div class="metrics-strip">
-            <div class="metric-box">
-              <strong>$1.57M</strong>
-              <span>Retail Volume Modeled</span>
-            </div>
-            <div class="metric-box">
-              <strong>98/100</strong>
-              <span>Cambridge ESG Score</span>
-            </div>
-            <div class="metric-box">
-              <strong>Top 5K</strong>
-              <span>Google Build with AI</span>
-            </div>
+  <header class="site-header">
+    <a class="brand" href="#">Fatma Mohamed</a>
+    <nav class="nav">
+      <a href="#projects">Work &amp; Dashboards</a>
+      <a href="#about">Experience</a>
+      <a class="btn btn-outline" href="https://drive.google.com/drive/folders/1kCsaZsFkycYHieaaOoexv7SABwInuCHU" target="_blank" rel="noreferrer">
+        View CV (PDF)
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero-avatar" src="images/1744385373625.jpg" alt="Fatma Mohamed">
+      <div class="hero-content">
+        <h1>Fatma Mohamed AboAmra</h1>
+        <div class="hero-title">Data Analyst | BI &amp; Analytics Specialist</div>
+        <p class="hero-desc">
+          Computer Science graduate with UK Upper Second-Class Honours (2:1)[cite: 1]. Transforming complex operational and business data into high-impact Power BI dashboards, automated ETL pipelines, and predictive analytics.
+        </p>
+        <div class="metrics-strip">
+          <div class="metric-box">
+            <strong>$1.57M</strong>
+            <span>Sales Modeled</span>
+          </div>
+          <div class="metric-box">
+            <strong>98/100</strong>
+            <span>Cambridge ESG Score</span>
+          </div>
+          <div class="metric-box">
+            <strong>Top 5K</strong>
+            <span>Google Build with AI</span>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- VISUAL DASHBOARDS & PROJECTS (Visual-First) -->
-      <section id="projects" class="projects-section">
-        <div class="section-head">
-          <h2>Featured Dashboards &amp; Case Studies</h2>
-          <p>Visual reporting, data pipelines, and analytical models.</p>
-        </div>
+    <!-- FEATURED DASHBOARDS -->
+    <section id="projects">
+      <div class="section-head">
+        <h2>Featured Dashboards &amp; Case Studies</h2>
+        <p>Interactive analytics, data models, and production implementations.</p>
+      </div>
 
-        <div class="project-grid">
-          <!-- 1. Executive 360 -->
-          <article class="project-card">
-            <img src="images/p_37691b55y2.jpeg" alt="Executive 360 Dashboard" loading="lazy">
-            <div class="project-card-body">
-              <div class="tag-row">
-                <span class="tag">Power BI</span>
-                <span class="tag">Executive BI</span>
-              </div>
-              <h3>Executive 360° Commercial Sales</h3>
-              <p>Modeled enterprise retail performance; identified $91K negative profit sub-categories and evaluated margin drivers.</p>
+      <div class="project-grid">
+        <!-- 1. Executive 360 -->
+        <article class="project-card">
+          <img src="images/p_37691b55y2.jpeg" alt="Executive 360 Dashboard" loading="lazy">
+          <div class="project-card-body">
+            <div class="tag-row">
+              <span class="tag">Power BI</span>
+              <span class="tag">Executive Reporting</span>
             </div>
-          </article>
+            <h3>Executive 360° Commercial Sales</h3>
+            <p>Modeled multi-region enterprise data to track $1.57M revenue; isolated $91K negative profit sub-categories for margin recovery.</p>
+          </div>
+        </article>
 
-          <!-- 2. Adidas -->
-          <article class="project-card">
-            <img src="images/p_37691759h3.jpeg" alt="Adidas Sales Dashboard" loading="lazy">
-            <div class="project-card-body">
-              <div class="tag-row">
-                <span class="tag">Star Schema</span>
-                <span class="tag">Advanced DAX</span>
-              </div>
-              <h3>Adidas Sales &amp; Channel Performance</h3>
-              <p>Structured an unnormalized retail dataset into a star schema; analyzed partner margin discrepancies and unit velocity.</p>
+        <!-- 2. Adidas -->
+        <article class="project-card">
+          <img src="images/p_37691759h3.jpeg" alt="Adidas Sales Dashboard" loading="lazy">
+          <div class="project-card-body">
+            <div class="tag-row">
+              <span class="tag">Star Schema</span>
+              <span class="tag">DAX Measures</span>
             </div>
-          </article>
+            <h3>Adidas Sales Performance</h3>
+            <p>Structured flat data into an optimized dimensional star schema; calculated custom DAX for unit velocity and partner channel margins.</p>
+          </div>
+        </article>
 
-          <!-- 3. Coffee Shop -->
-          <article class="project-card">
-            <img src="images/p_3769qfad11.jpeg" alt="Coffee Shop Analytics" loading="lazy">
-            <div class="project-card-body">
-              <div class="tag-row">
-                <span class="tag">Power Query</span>
-                <span class="tag">Retail Analytics</span>
-              </div>
-              <h3>Coffee Shop Sales Performance</h3>
-              <p>Cleaned and transformed 5 operational tables; evaluated branch revenue targets and customer purchase behaviors.</p>
+        <!-- 3. Coffee Shop -->
+        <article class="project-card">
+          <img src="images/p_3769qfad11.jpeg" alt="Coffee Shop Analytics" loading="lazy">
+          <div class="project-card-body">
+            <div class="tag-row">
+              <span class="tag">Power Query</span>
+              <span class="tag">Retail Analytics</span>
             </div>
-          </article>
+            <h3>Coffee Shop Sales Analytics</h3>
+            <p>Cleaned and transformed 5 operational tables; analyzed branch revenue, peak hours, and customer product preferences.</p>
+          </div>
+        </article>
 
-          <!-- 4. ML Car Prediction -->
-          <article class="project-card">
-            <img src="images/car-ml.png" alt="Automotive EDA Heatmap" loading="lazy">
-            <div class="project-card-body">
-              <div class="tag-row">
-                <span class="tag">Python</span>
-                <span class="tag">Scikit-learn</span>
-              </div>
-              <h3>Automotive Market Price Prediction</h3>
-              <p>Conducted statistical EDA and correlation analysis; trained regression models forecasting vehicle depreciation values[cite: 8].</p>
+        <!-- 4. ML Car Prediction -->
+        <article class="project-card">
+          <img src="images/__results___75_1.png" alt="Automotive Correlation Analysis" loading="lazy">
+          <div class="project-card-body">
+            <div class="tag-row">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-learn</span>
             </div>
-          </article>
+            <h3>Vehicle Resale Price Prediction</h3>
+            <p>Conducted statistical feature engineering and correlation modeling; developed ML regression models predicting vehicle depreciation[cite: 8].</p>
+          </div>
+        </article>
 
-          <!-- 5. CloudCart -->
-          <article class="project-card">
-            <img src="images/cloud.jpg" alt="CloudCart AWS Architecture" loading="lazy">
-            <div class="project-card-body">
-              <div class="tag-row">
-                <span class="tag">AWS S3 &amp; Lambda</span>
-                <span class="tag">PostgreSQL</span>
-              </div>
-              <h3>CloudCart – Cloud Pipeline &amp; ETL</h3>
-              <p>Configured an automated serverless ingestion pipeline; ingested raw records to PostgreSQL with multi-AZ cloud architecture.</p>
+        <!-- 5. CloudCart -->
+        <article class="project-card">
+          <img src="images/Screenshot 2026-09-24 190048.jpg" alt="CloudCart AWS Architecture" loading="lazy">
+          <div class="project-card-body">
+            <div class="tag-row">
+              <span class="tag">AWS S3 &amp; Lambda</span>
+              <span class="tag">PostgreSQL</span>
             </div>
-          </article>
+            <h3>CloudCart – AWS Serverless Pipeline</h3>
+            <p>Built an automated data pipeline using S3 event triggers and Python Lambda functions to load validated records directly into PostgreSQL.</p>
+          </div>
+        </article>
 
-          <!-- 6. Patagonia ESG -->
-          <article class="project-card">
-            <div style="height: 190px; background: linear-gradient(135deg, #0f766e, #1e3a8a); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-family: 'Space Grotesk'; font-size: 1.1rem; padding: 1rem; text-align: center;">
-              Cambridge ESG Analysis (98/100)
+        <!-- 6. Patagonia ESG -->
+        <article class="project-card">
+          <div style="height: 190px; background: linear-gradient(135deg, #0f766e 0%, #1e3a8a 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.15rem; padding: 1.5rem; text-align: center;">
+            Patagonia ESG &amp; Supply Chain (98/100)
+          </div>
+          <div class="project-card-body">
+            <div class="tag-row">
+              <span class="tag">Cambridge ESG</span>
+              <span class="tag">Supply Chain</span>
             </div>
-            <div class="project-card-body">
-              <div class="tag-row">
-                <span class="tag">Cambridge ESG</span>
-                <span class="tag">Supply Chain</span>
-              </div>
-              <h3>Patagonia Carbon &amp; ESG Analysis</h3>
-              <p>Audited Scope 1-3 carbon accounting metrics and developed supply chain resilience action plans for compliance.</p>
-            </div>
-          </article>
-        </div>
-      </section>
+            <h3>Patagonia Carbon &amp; ESG Analysis</h3>
+            <p>Evaluated Scope 1-3 carbon accounting indicators and formulated operational strategies balancing environmental compliance with logistics.</p>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <!-- QUICK SNAPSHOT: Credentials & Experience (Concise Tables) -->
-      <section id="about" class="highlights-grid">
-        <div class="card-box">
-          <h3>Professional Roles &amp; Mentorship</h3>
-          <ul class="list-simple">
-            <li><span>Data Analysis Instructor (DECI)</span> <strong>EYouth</strong></li>
-            <li><span>Data Analysis Mentor</span> <strong>Egypt Data Builders</strong></li>
-            <li><span>Data Science &amp; Analytics Scholar</span> <strong>DEPI (MCIT)</strong></li>
-            <li><span>AI in Data Analysis Scholar</span> <strong>NTI HireReady</strong></li>
-          </ul>
-        </div>
+    <!-- EXPERIENCE & CREDENTIALS SNAPSHOT -->
+    <section id="about" class="highlights-grid">
+      <div class="card-box">
+        <h3>Professional Roles &amp; Mentorship</h3>
+        <ul class="list-simple">
+          <li><span>Data Analysis Instructor</span> <strong>EYouth (DECI)</strong></li>
+          <li><span>Data Analysis Mentor</span> <strong>Egypt Data Builders</strong></li>
+          <li><span>Data Science &amp; Analytics Scholar</span> <strong>DEPI (MCIT)</strong></li>
+          <li><span>AI in Data Analysis Track</span> <strong>NTI HireReady</strong></li>
+        </ul>
+      </div>
 
-        <div class="card-box">
-          <h3>Education &amp; Core Stack</h3>
-          <ul class="list-simple">
-            <li><span>B.Sc. Computer Science (Dual OU-UK)</span> <strong>2:1 Honours (GPA 3.07)[cite: 1]</strong></li>
-            <li><span>Business Intelligence</span> <strong>Power BI, DAX, Excel</strong></li>
-            <li><span>Databases &amp; Cloud</span> <strong>SQL, PostgreSQL, AWS</strong></li>
-            <li><span>Languages &amp; Big Data</span> <strong>Python, PySpark</strong></li>
-          </ul>
-        </div>
-      </section>
-    </main>
+      <div class="card-box">
+        <h3>Education &amp; Core Stack</h3>
+        <ul class="list-simple">
+          <li><span>B.Sc. Computer Science (Dual OU-UK)</span> <strong>Honours: 2:1 (GPA 3.07)[cite: 1]</strong></li>
+          <li><span>Business Intelligence</span> <strong>Power BI, DAX, Excel</strong></li>
+          <li><span>Databases &amp; Cloud</span> <strong>SQL, PostgreSQL, AWS</strong></li>
+          <li><span>Big Data &amp; Languages</span> <strong>Python, PySpark</strong></li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <p>© 2026 Fatma Mohamed AboAmra | <a href="mailto:fmohamedaboamra@gmail.com" style="color: var(--brand); text-decoration: none; font-weight: 600;">fmohamedaboamra@gmail.com</a></p>
-    </footer>
+  <footer>
+    <p>© 2026 Fatma Mohamed AboAmra | <a href="mailto:fmohamedaboamra@gmail.com" style="color: var(--brand); text-decoration: none; font-weight: 700;">fmohamedaboamra@gmail.com</a></p>
+  </footer>
 
-  </body></html>
+</body>
+</html>
