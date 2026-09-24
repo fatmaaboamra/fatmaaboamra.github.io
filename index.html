@@ -19,9 +19,8 @@
       --gold: #e2b170;
       --gold-soft: #faeed9;
       --teal: #2dd4bf;
-      --teal-dim: rgba(45, 212, 191, 0.12);
       --border: rgba(226, 177, 112, 0.2);
-      --border-subtle: rgba(255, 255, 255, 0.07);
+      --border-subtle: rgba(255, 255, 255, 0.08);
       --shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
     }
 
@@ -47,7 +46,6 @@
       pointer-events: none;
     }
 
-    /* Header */
     .site-header {
       position: sticky;
       top: 0;
@@ -56,7 +54,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 1.1rem 7vw;
-      background: rgba(11, 15, 18, 0.85);
+      background: rgba(11, 15, 18, 0.88);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-subtle);
     }
@@ -180,13 +178,13 @@
     .metric-card strong {
       display: block;
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.4rem;
+      font-size: 1.35rem;
       color: #fff;
       font-weight: 700;
     }
     .metric-card span { font-size: 0.82rem; color: var(--text-muted); }
 
-    /* Section Headers & Tabs */
+    /* Filter Tabs */
     .section-header {
       display: flex;
       justify-content: space-between;
@@ -372,7 +370,6 @@
     .timeline-info .org { color: var(--teal); font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; }
     .timeline-info p { color: var(--text-muted); font-size: 0.9rem; }
 
-    /* Footer */
     footer {
       border-top: 1px solid var(--border-subtle);
       padding: 2.5rem 0;
@@ -430,7 +427,7 @@
         <h1>Fatma Mohamed AboAmra</h1>
         <div class="hero-role">Data Analyst | BI &amp; Analytics Specialist | AI Data Analyst</div>
         <p class="hero-bio">
-          Computer Science graduate with UK Upper Second-Class Honours (2:1) from The Open University, UK &amp; AOU[cite: 1]. Experienced in automating serverless cloud ETL pipelines, training predictive machine learning models, and designing executive Power BI business intelligence solutions.
+          Computer Science graduate with UK Upper Second-Class Honours (2:1) from The Open University, UK &amp; AOU[cite: 1]. Experienced in orchestrating automated cloud ETL pipelines, building dimensional data models, training ML regression models, and designing executive business intelligence solutions.
         </p>
 
         <div class="metric-strip">
@@ -443,8 +440,8 @@
             <span>Cloud &amp; ML Data Pipelines</span>
           </div>
           <div class="metric-card">
-            <strong>98/100</strong>
-            <span>Cambridge ESG Score</span>
+            <strong>Instructor &amp; Mentor</strong>
+            <span>EYouth &amp; Egypt Data Builders</span>
           </div>
           <div class="metric-card">
             <strong>Top 5,000</strong>
@@ -459,7 +456,7 @@
       <div class="section-header">
         <div>
           <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Real-world production dashboards, cloud ETL architectures, and predictive machine learning models.</p>
+          <p class="section-subtitle">Production dashboards, cloud ETL pipelines, and predictive machine learning models.</p>
         </div>
         <div class="tabs">
           <button class="tab-btn active" onclick="filterProjects('all', this)">All</button>
@@ -472,7 +469,7 @@
       <div class="project-grid">
         <!-- 1. Patagonia ESG (Cambridge) -->
         <article class="project-card" data-category="cloud">
-          <img class="project-thumb" src="Screenshot 2026-09-24 193558.png" alt="Patagonia ESG Cambridge Certificate" loading="lazy">
+          <img class="project-thumb" src="Screenshot%202026-09-24%20193558.png" alt="Patagonia ESG Cambridge Certificate" loading="lazy">
           <div class="project-body">
             <div class="tag-strip">
               <span class="tag">Cambridge &amp; Localized</span>
@@ -480,13 +477,13 @@
               <span class="tag">ESG &amp; Carbon</span>
             </div>
             <h3>Patagonia Supply Chain Resilience</h3>
-            <p>Audited global supply chain sustainability and Scope 1-3 greenhouse gas accounting frameworks; designed data-backed operational action plans ensuring environmental compliance and logistics efficiency.</p>
+            <p>Audited global supply chain sustainability and Scope 1-3 greenhouse gas accounting frameworks; designed operational action plans ensuring environmental compliance and logistics efficiency.</p>
           </div>
         </article>
 
         <!-- 2. CloudCart (AWS Pipeline) -->
         <article class="project-card" data-category="cloud">
-          <img class="project-thumb" src="Screenshot 2026-09-24 190048.png" alt="CloudCart AWS Architecture" loading="lazy">
+          <img class="project-thumb" src="Screenshot%202026-09-24%20190048.png" alt="CloudCart AWS Architecture" loading="lazy">
           <div class="project-body">
             <div class="tag-strip">
               <span class="tag">AWS S3 &amp; Lambda</span>
@@ -536,7 +533,7 @@
               <span class="tag">DAX Measures</span>
             </div>
             <h3>Executive 360° Commercial Sales</h3>
-            <p>Modeled enterprise transactional data across regions to track $1.57M in revenue, $175K in profit, and isolated $91K in negative profits across underperforming sub-categories for margin recovery[cite: 5].</p>
+            <p>Modeled enterprise transactional data across regions to track revenue and profit, isolating underperforming sub-categories for strategic margin recovery[cite: 5].</p>
           </div>
         </article>
 
